@@ -15,6 +15,8 @@ public class TestDataInit {
 
     /**
      * 확인용 초기 데이터 추가
+     * @EventListener(ApplicationReadyEvent.class)
+     * : 스프링 컨테이너가 완전히 초기화를 다 끝내고 실행 준비가 됐을 때 발생하는 이벤트
      */
     @EventListener(ApplicationReadyEvent.class)
     public void initData() {

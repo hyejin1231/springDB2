@@ -33,7 +33,7 @@ public class MemoryItemRepository implements ItemRepository {
 
     @Override
     public Optional<Item> findById(Long id) {
-        return Optional.ofNullable(store.get(id));
+        return Optional.ofNullable(store.get(id)); // 조회하려는 id가 없으면 null이기 때문에 Optional로 감싸서 반환해야한다.
     }
 
     @Override

@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 
 
-@Import(MemoryConfig.class)
-@SpringBootApplication(scanBasePackages = "hello.itemservice.web")
+@Import(MemoryConfig.class) // MemoryConfig 파일을 설정 파일로 사용
+@SpringBootApplication(scanBasePackages = "hello.itemservice.web") // 컨트롤러만 컴포넌트 스캔하도록
 public class ItemServiceApplication {
 
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class ItemServiceApplication {
 	}
 
 	@Bean
-	@Profile("local")
+	@Profile("local") // local이라는 프로필이 사용되는 경우에만 testDateInit 스프링 빈 등록
 	public TestDataInit testDataInit(ItemRepository itemRepository) {
 		return new TestDataInit(itemRepository);
 	}
