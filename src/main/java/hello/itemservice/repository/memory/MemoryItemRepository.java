@@ -42,7 +42,7 @@ public class MemoryItemRepository implements ItemRepository {
         Integer maxPrice = cond.getMaxPrice();
         return store.values().stream()
                 .filter(item -> {
-                    if (ObjectUtils.isEmpty(itemName)) {
+                    if (ObjectUtils.isEmpty(itemName)) { // 빈 문자도 empty로 ~
                         return true; // 검색조건을 사용하지 않는 것으로 무조건 true
                     }
                     return item.getItemName().contains(itemName);
