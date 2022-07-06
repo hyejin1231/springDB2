@@ -10,7 +10,8 @@ import org.springframework.context.annotation.Profile;
 
 //@Import(MemoryConfig.class) // MemoryConfig 파일을 설정 파일로 사용
 //@Import(JdbcTemplateV1Config.class)
-@Import(JdbcTemplateV2Config.class)
+//@Import(JdbcTemplateV2Config.class)
+@Import({JdbcTemplateV3Config.class})
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web") // 컨트롤러만 컴포넌트 스캔하도록
 public class ItemServiceApplication {
 
