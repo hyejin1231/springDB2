@@ -69,6 +69,12 @@ public class JdbcTemplateItemRepositoryV1 implements ItemRepository {
         }
     }
 
+    /**
+     * JdbcTemplate의 단점
+     * : 동적 쿼리를 생성하기에 까다로움 (너무 복잡함) -> MyBatis가 어느정도 해결해줌
+     * @param cond
+     * @return
+     */
     @Override
     public List<Item> findAll(ItemSearchCond cond) {
         String itemName = cond.getItemName();
