@@ -13,7 +13,10 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
+/**
+ * 테스트에서 중요한 점은 격리성이다!!
+ */
+@SpringBootTest //@SpringBootTest는 @SpringBootApplication 를 찾아서 설정으로 사용한다.
 class ItemRepositoryTest {
 
     /**
