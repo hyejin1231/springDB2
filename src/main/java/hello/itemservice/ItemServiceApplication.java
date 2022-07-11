@@ -16,7 +16,8 @@ import javax.sql.DataSource;
 //@Import(JdbcTemplateV1Config.class)
 //@Import(JdbcTemplateV2Config.class)
 @Slf4j
-@Import({JdbcTemplateV3Config.class})
+//@Import({JdbcTemplateV3Config.class})
+@Import(MyBatisConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.itemservice.web") // 컨트롤러만 컴포넌트 스캔하도록
 public class ItemServiceApplication {
 
