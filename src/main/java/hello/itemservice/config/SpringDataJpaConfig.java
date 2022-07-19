@@ -12,6 +12,9 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.persistence.EntityManager;
 
+/**
+ * ItemService -> JpaItemRepository -> SpringDataJpaItemRepository (프록시 객체)
+ */
 @Configuration
 @RequiredArgsConstructor
 public class SpringDataJpaConfig {
